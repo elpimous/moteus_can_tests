@@ -1,7 +1,8 @@
 # SOME TESTS TO CONTACT MOTEUS CAN BOARD VIA A PEAK 4CAN M2 BOARD
 
-# change moteus controller ID :
+change moteus controller ID :
 -------------------------------
+
 open tview
 
 ```python3.8 -m moteus_gui.tview --devices=11 --can-chan can0```
