@@ -58,3 +58,36 @@ data_tseg2=7
 
 
 data_sjw=12
+
+overview of pcan interface :
+----------------------------
+```lspcan -T -t -i```
+
+read pcan port properties :
+---------------------------
+```for f in /sys/class/pcan/pcanpcifd1/*; do [ -f $f ] && echo -n "`basename $f` = " && cat $f; done```
+
+improving performance :
+-----------------------
+```sudo gedit /etc/modprobe.d/pcan.conf```
+
+insert :
+```
+# pcan - automatic made entry, begin --------
+# if required add options and remove comment
+# options pcan type=isa,sp
+options pcan fdirqtl=1
+options pcan fdirqcl=1
+options pcan fdusemsi=1
+install pcan modprobe --ignore-install pcan
+# pcan - automatic made entry, end ----------
+```
+exit !
+
+reload :
+
+```
+sudo rmmod pcan & sudo modprobe pcan
+```
+
+
