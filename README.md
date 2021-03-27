@@ -3,11 +3,18 @@
 # change moteus controller ID :
 -------------------------------
 open tview
+
 ```python3.8 -m moteus_gui.tview --devices=11 --can-chan can0```
+
+
 change id
+
 ``` conf write  ```
+
 close
+
 reopen tview
+
 ``` conf write  ```
 
 # socketcan
