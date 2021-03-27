@@ -1,4 +1,4 @@
-# SOME TESTS TO CONTACT MOTEUS CAN BOARD VIA A PEAK 4CAN ME BOARD
+# SOME TESTS TO CONTACT MOTEUS CAN BOARD VIA A PEAK 4CAN M2 BOARD
 
 # socketcan
 
@@ -11,3 +11,6 @@ sudo ip link set can0 up type can   tq 12 prop-seg 25 phase-seg1 25 phase-seg2 2
 open "can0" on Moteus Tview, and call QDD100 ID = 11 :
 ------------------------------------------------------
 ```python3.8 -m moteus_gui.tview --devices=11 --can-chan can0```
+
+
+# pcan tests
