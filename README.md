@@ -19,10 +19,24 @@ modify params :
 ---------------
 ``` sudo echo 12 | sudo tee pcanpcifd0/data_sjw ```
 for each of the 4 pcanpcifdX/  with each following param
+
+
 nom_Tseq1 = 50
+
+
 nom_Tseq2 = 29
+
+
 nom_sjw=10
+
+
 data_brp=1
+
+
 data_tseg1=8
+
+
 data_tseg2=7
+
+
 data_sjw=12
