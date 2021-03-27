@@ -1,6 +1,6 @@
-## some tests to talk to moteus board with Peak 4 can M2 board
+## SOME TESTS TO CONTACT MOTEUS CAN BOARD VIA A PEAK 4CAN ME BOARD
 
-# SOCKETCAN
+# socketcan
 
 open "can0" port with params :
 -----------------------
