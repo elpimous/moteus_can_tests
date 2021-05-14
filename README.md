@@ -51,8 +51,8 @@ sudo modprobe pcan # driver loading
 
 test : ```pcanview```
 
-modify params :
----------------
+modify params for permanent use:
+--------------------------------
 ``` sudo echo 12 | sudo tee pcanpcifd0/data_sjw ```
 for each of the 4 pcanpcifdX/  with each following param
 
