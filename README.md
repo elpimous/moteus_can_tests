@@ -1,22 +1,6 @@
-# INSTALLATION OF PCAN DRIVER under ubuntu 20.04
-
-```
-sudo apt-get install libpopt-dev
-
-wget https://www.peak-system.com/fileadmin/media/linux/files/peak-linux-driver-8.12.0.tar.gz
-tar -xzf peak-linux-driver-8.12.0.tar.gz
-cd peak-linux-driver-8.12.0/
-make -C driver PCI=PCI_SUPPORT PCIEC=PCIEC_SUPPORT DNG=NO_DONGLE_SUPPORT USB=NO_USB_SUPPORT ISA=NO_ISA_SUPPORT PCC=NO_PCCARD_SUPPORT
-sudo make -C driver install
-make -C lib && sudo make -C lib install
-make -C test && sudo make -C test install # test utilities (optional)
-sudo modprobe pcan # driver loading
-```
-
-test : ```pcanview```
-
 
 # SOME TESTS TO CONTACT MOTEUS CAN BOARD VIA A PEAK 4CAN M2 BOARD
+# OVER CAN FD MOTEUS
 
 change moteus controller ID :
 -------------------------------
@@ -49,7 +33,23 @@ open "can0" on Moteus Tview, and call QDD100 ID = 11 :
 ```python3.8 -m moteus_gui.tview --devices=11 --can-chan can0```
 
 
-# pcan tests
+# INSTALLATION OF PCAN DRIVER under ubuntu 20.04
+
+```
+sudo apt-get install libpopt-dev
+
+wget https://www.peak-system.com/fileadmin/media/linux/files/peak-linux-driver-8.12.0.tar.gz
+tar -xzf peak-linux-driver-8.12.0.tar.gz
+cd peak-linux-driver-8.12.0/
+make -C driver PCI=PCI_SUPPORT PCIEC=PCIEC_SUPPORT DNG=NO_DONGLE_SUPPORT USB=NO_USB_SUPPORT ISA=NO_ISA_SUPPORT PCC=NO_PCCARD_SUPPORT
+sudo make -C driver install
+make -C lib && sudo make -C lib install
+make -C test && sudo make -C test install # test utilities (optional)
+sudo modprobe pcan # driver loading
+```
+
+# -------------------------------------------------------------------------------------------------------------------------------------------------
+test : ```pcanview```
 
 modify params :
 ---------------
