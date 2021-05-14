@@ -32,6 +32,7 @@ open "can0" on Moteus Tview, and call QDD100 ID = 11 :
 ------------------------------------------------------
 ```python3.8 -m moteus_gui.tview --devices=11 --can-chan can0```
 
+# ------------------------------------------------------------------------
 
 # INSTALLATION OF PCAN DRIVER under ubuntu 20.04
 
@@ -48,7 +49,6 @@ make -C test && sudo make -C test install # test utilities (optional)
 sudo modprobe pcan # driver loading
 ```
 
-# -------------------------------------------------------------------------------------------------------------------------------------------------
 test : ```pcanview```
 
 modify params :
