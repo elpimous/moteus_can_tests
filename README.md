@@ -34,6 +34,17 @@ open "can0" on Moteus Tview, and call QDD100 ID = 11 :
 
 # ------------------------------------------------------------------------
 
+# Check: Are CAN drivers part of your Linux environment?
+
+```grep PEAK_ /boot/config-`uname -r` ```
+
+# Check: Is the CAN device initialized?
+
+```lsmod | grep ^peak
+
+ls -l /dev/pcan*
+```
+
 # INSTALLATION OF PCAN DRIVER under ubuntu 20.04
 
 ```
